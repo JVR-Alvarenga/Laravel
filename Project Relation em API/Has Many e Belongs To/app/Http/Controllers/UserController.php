@@ -15,15 +15,16 @@ class UserController extends Controller{
         $id = $r->id;
         $user = User::where('id', $id)->first();
         if(!empty($user)){
-            return $user->address;
+            $user['posts'] = $user->posts;
+            return $user;
         }else{
             return 'Usuario Nao Existente.';
         }
     }
 
-    public function insert(Request $r){
-        $rawData = $r->only(['name', 'email', 'password']);
-        $user = User::create($rawData);
+    public function create(Request $r){
+        $data = $r->only(['name', 'email', 'password']);
+        $user = User::create($data);
 
         return $user;
     }
