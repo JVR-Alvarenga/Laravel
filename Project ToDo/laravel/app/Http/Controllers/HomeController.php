@@ -29,6 +29,8 @@ class HomeController extends Controller{
         $data['tasks_true'] = $data['tasks']->where('is_done', true)->count();
         $data['tasks_false'] = $data['tasks']->where('is_done', false)->count();
 
+        $percentage = ($data['tasks_true'] / $data['count_tasks']) * 100;
+        $data['percentage'] = number_format($percentage, 0);
         return view('home', ['data' => $data]);
     }
 

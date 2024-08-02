@@ -26,7 +26,7 @@ body{
 
 .sidebar {
     width: 100px;
-    height: 150vh;
+    height: 100vh;
     background-color: var(--color-primary);
 }
 
@@ -101,17 +101,23 @@ h1 {
 
 .graph_header-subtitle {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
-.graph-placeholder {
-    background-color: #ccc;
+.container-bar {
     width: 400px;
-    height: 400px;
-    margin-bottom: 70px;
-    padding: 10px;
-    background: url('/assets/images/graph.png');
-    background-size: contain;
+    height: 30px;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    margin: 25px 0px;
+}
+.box-bar {
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+}
+.percentage-box {
+    font-size: 20px;
 }
 
 .graph-container {
@@ -126,6 +132,7 @@ h1 {
     height: 40px;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 
 .graph-container-box img {
