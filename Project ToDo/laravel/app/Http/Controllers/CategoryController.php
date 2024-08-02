@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 class CategoryController extends Controller{
     public function index(Request $r){
         $userId = Auth::id();
-        $data = Category::where('user_id', $userId)->get();
+        $data['categories'] = Category::where('user_id', $userId)->get();
+        $data['count_categories'] = $data['categories']->count();
         return view('categories.home', ['data' => $data]);
     }
 

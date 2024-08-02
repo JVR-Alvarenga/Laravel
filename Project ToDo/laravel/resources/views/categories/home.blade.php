@@ -7,7 +7,7 @@
         <div class="main-container">
             <h1>Categorias</h1>
 
-            <div class="categoy-count">Total de Categorias: 2</div>
+            <div class="categoy-count">Total de Categorias: {{$data['count_categories']}}</div>
 
             <div class="graph-box">
                 <div class="category-logo"></div>
@@ -19,7 +19,7 @@
                 <p>Todas as suas Categorias</p>
                 <img src="/assets/images/icon-seta-bottom.png" />
             </div>
-            @foreach($data as $category)
+            @foreach($data['categories'] as $category)
                 <x-categories :data=$category />
             @endforeach
         </div>
