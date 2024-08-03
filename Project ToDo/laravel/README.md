@@ -5,3 +5,4 @@
 
 - **Usuário**: temos somente o registro e o login do usuario, onde usamos para pegar suas tarefas e categorias, colocamos tambem seguranças nas páginas para não serem acessadas por alguém que não tem registro e login
 
+![Captura de tela 2024-08-03 110644](https://github.com/user-attachments/assets/1e8edb57-ff98-4763-bdf8-1208c59c8444)
