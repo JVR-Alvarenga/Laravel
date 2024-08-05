@@ -9,4 +9,4 @@ Este é um repositório para meus ensinamentos no FrameWork Laravel
 
 ## Projetos
 - **API**: Temos um projeto em API sobre relations do Laravel, onde usamos dois, Has Many e BelongsTo
-- **TODO**: Um Projeto que estou desenvolvendo, focado em gerenciar tarefas de um usuario
+- **TODO**: Um Projeto focado em gerenciar tarefas do dia-a-dia de um usuario
