@@ -26,9 +26,9 @@
         <div class="graph-container">
             <div class="percentage-box"> Porcentagem das tarefas concluidas </div>
             <div class="container-bar">
-                <div class="box-bar" style="width: {{$data['percentage']}}%"></div>
+                <div class="box-bar" style="width: {{$data['percentage'] ?? 0}}%"></div>
             </div>
-            <div class="percentage-box">{{$data['percentage']}}% </div>
+            <div class="percentage-box">{{$data['percentage'] ?? 0}}% </div>
             
 
             <div class="graph-container-box">
