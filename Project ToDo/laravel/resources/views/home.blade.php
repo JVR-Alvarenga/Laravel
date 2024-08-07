@@ -30,7 +30,6 @@
             </div>
             <div class="percentage-box">{{$data['percentage'] ?? 0}}% </div>
             
-
             <div class="graph-container-box">
                 <img src="/assets/images/icon-info.png" />
                 <p class="graph_header-tasks">restam {{$data['tasks_false']}} tarefas para serem realizados</p>
