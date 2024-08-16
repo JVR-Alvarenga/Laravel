@@ -23,9 +23,11 @@ class PostController extends Controller {
 
     public function addPost(CreatePostRequest $r) : JsonResponse{
         $data = $r->only(['title', 'price', 'isNegotiable', 'description', 'user_id', 'state_id', 'category_id']);
-        $post = Post::create($data);
-
-        return response()->json(['Aviso' => 'Poste Criado Com Sucesso !']);
+        
+        if($post = Post::create($data)){
+            return response()->json(['Aviso' => 'Poste Criado Com Sucesso !']);
+        }
+        return responser()->json(['Aviso' => 'Poste Não Foi Criado !']);
     }
 
     public function updatePost(UpdatePostRequest $r) : JsonResponse{
