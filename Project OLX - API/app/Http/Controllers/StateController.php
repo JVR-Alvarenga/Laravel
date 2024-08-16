@@ -7,9 +7,9 @@ use App\Models\State;
 use Illuminate\Http\JsonResponse;
 
 class StateController extends Controller {
-    public function index(Request $r) : JsonResponse{
+    public function findAll(Request $r) : JsonResponse{
         $states = State::all();
 
-        return response()->json(['data' => $states]);
+        return response()->json(['Estados' => $states]);
     }
 }

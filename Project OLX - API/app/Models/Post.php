@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\State;
 use App\Models\Category;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model {
     use HasFactory;
@@ -14,8 +14,8 @@ class Post extends Model {
     public $table = 'posts';
 
     protected $fillable = [
-        'title', 'price', 'isNegotiable', 'description', 
-        'category_id', 'user_id', 'state_id', 'views'
+        'title', 'price', 'isNegotiable', 'description', 'views',
+        'user_id', 'category_id', 'state_id'
     ];
 
     public function user(){
