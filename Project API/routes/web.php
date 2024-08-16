@@ -24,3 +24,4 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/posts', [PostController::class, 'findAll'])->name('post.all');
 Route::get('/posts/{id}', [PostController::class, 'findOne'])->name('post.findOne');
 Route::get('/posts/add', [PostController::class, 'addPost'])->name('post.add');
+
