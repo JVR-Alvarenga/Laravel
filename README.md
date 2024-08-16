@@ -11,4 +11,4 @@ Este é um repositório para meus ensinamentos no FrameWork Laravel
 - **API**: Temos um projeto em API sobre relations do Laravel, onde usamos dois, Has Many e BelongsTo
 - **TODO**: Um Projeto focado em gerenciar tarefas do dia-a-dia de um usuario
 - **E-mails**: Aprendizagem de envio de e-mails no Laravel
-- **OLX**: Projeto em API de um sistema inspirado no OLX
+- **API**: Projeto em API de um sistema simples com usuário, categorias, estados e postes
