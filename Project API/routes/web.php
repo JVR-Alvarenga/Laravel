@@ -24,22 +24,3 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/posts', [PostController::class, 'findAll'])->name('post.all');
 Route::get('/posts/{id}', [PostController::class, 'findOne'])->name('post.findOne');
 Route::get('/posts/add', [PostController::class, 'addPost'])->name('post.add');
-
-
-
-
-// {
-//     "title": "Poste 3",
-//     "price": 1234,
-//     "isNegotiable": 0,
-//     "description": "Terceiro poste",
-//     "user_id": 1,
-//     "state_id": 2,
-//     "category_id": 2
-// }
-
-
-
-
-
-
