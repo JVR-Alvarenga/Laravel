@@ -27,7 +27,7 @@ class PostController extends Controller {
         if($post = Post::create($data)){
             return response()->json(['Aviso' => 'Poste Criado Com Sucesso !']);
         }
-        return responser()->json(['Aviso' => 'Poste Não Foi Criado !']);
+        return response()->json(['Aviso' => 'Poste Não Foi Criado !']);
     }
 
     public function updatePost(UpdatePostRequest $r) : JsonResponse{
