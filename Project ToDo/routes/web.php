@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Mails\AuthMailController;
 
 Route::middleware(['auth'])->group(function (){
     Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -29,7 +30,9 @@ Route::middleware(['auth'])->group(function (){
     Route::post('/categories/edit_action', [CategoryController::class, 'editAction'])->name('category.editAction');
 
     Route::get('/categories/delete', [CategoryController::class, 'delete'])->name('category.delete');
+
 });
+Route::get('/email/send', [AuthMailController::class, 'sendEmail'])->name('email.send');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/action', [AuthController::class, 'loginAction'])->name('loginAction');

@@ -51,7 +51,9 @@ class AuthController extends Controller{
         $user = $r->only(['name', 'email']);
         $user['password'] = Hash::make($r->password);
 
-        User::create($user);
-        return redirect(route('login'));
+        if(User::create($user)) {
+            return redirect(route('email.send', ['email' => $r->email]));
+        }
+        return redirect(route('register'));
     }
 }
