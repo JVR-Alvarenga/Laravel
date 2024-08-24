@@ -12,6 +12,5 @@ class AuthMailController extends Controller {
         $user = User::where('email', $r->email)->first();
         SendRegisterMail::dispatch($user);
         return redirect(route('login'));
-        
     }
 }
