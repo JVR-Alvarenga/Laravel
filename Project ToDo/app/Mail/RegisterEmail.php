@@ -22,7 +22,7 @@ class RegisterEmail extends Mailable {
     public function envelope(): Envelope {
         return new Envelope(
             subject: 'Email Registrado',
-            from: new Address('jorceprimo@gmail.com', 'João Lucas R. Alvarenga')
+            from: new Address('testador@gmail.com', 'Testador de Mails')
         );
     }
 
