@@ -12,4 +12,4 @@ Este é um repositório para meus ensinamentos no FrameWork Laravel.
 - **TODO**: Um Projeto focado em gerenciar tarefas do dia-a-dia de um usuario.
 - **E-mails**: Aprendizagem de envio de e-mails no Laravel.
 - **API**: Projeto em API de um sistema simples com usuário, categorias, estados e postes.
-- **CMS**: Projeto em andamento de um site CMS, onde é um site comum, com personalização de perfil e etc e se você for administrador terá acesso a um pouco mais de recursos.
+- **CMS**: Projeto inacabado no momento, de um site CMS, onde é um site comum, com personalização de perfil e etc e se você for administrador terá acesso a um pouco mais de recursos.
