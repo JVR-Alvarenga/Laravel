@@ -317,6 +317,7 @@ return [
             // 'label' => 4,
             'label_color' => 'success',
         ],
+        ['header' => 'account_settings'],
         [
             'text' => 'Meus Usuários',
             'url' => 'admin/users',
@@ -325,16 +326,15 @@ return [
             'label_color' => 'success',
             'can' => 'edit-users',
         ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'Configurações',
-            'url' => '/config',
-            'icon' => 'far fa-fw fa-file',
-        ],
         [
             'text' => 'Perfil',
             'url' => '/profile',
             'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Configurações',
+            'url' => '/config/general',
+            'icon' => 'far fa-fw fa-file',
         ],
     ],
 

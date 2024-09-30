@@ -7,6 +7,9 @@ use App\Http\Controllers\Site\HomeSiteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Site\ProfileUserController;
+use App\Http\Controllers\Site\ConfigGeneralController;
+use App\Http\Controllers\Site\PageController;
+use App\Http\Controllers\Site\RoutesController;
 
 Route::prefix('admin')->middleware(['auth', 'can:edit-users'])->group(function () {
     Route::get('/home', [HomeAdminController::class, 'home'])->name('admin.home');
@@ -20,11 +23,19 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/register', [RegisterController::class, 'register'])->name('user.register');
     Route::post('/register', [RegisterController::class, 'registerAction'])->name('user.registerAction');
 });
-Route::post('/logout', [LoginController::class, 'logout'])->middleware(['auth'])->name('logout');
 
-Route::get('/home', [HomeSiteController::class, 'home'])->name('site.home');
+Route::middleware(['auth'])->group(function () {
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    
+    Route::get('/home', [HomeSiteController::class, 'home'])->name('site.home');
+    
+    Route::get('/profile', [ProfileUserController::class, 'profileHome'])->name('user.profile');
+    Route::put('/edit/profile', [ProfileUserController::class, 'profileEdit'])->name('user.profileEdit');
+    
+    Route::get('/config/general', [ConfigGeneralController::class, 'config'])->name('config.general');
+    Route::put('/config/edit/action', [ConfigGeneralController::class, 'editAction'])->name('config.editAction');
+    
+    Route::resource('/pages', PageController::class);
 
-Route::get('/profile', [ProfileUserController::class, 'index'])->name('user.profile');
-//Route::get('/');
-//Route::get('/');
-
+    Route::fallback([RoutesController::class, 'route']);
+});
