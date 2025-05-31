@@ -8,13 +8,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
+
+    public $table = 'users';
+    
+    public $timestamps = false;
 
     protected $fillable = [
         'name',
         'email',
         'password',
+        'is_admin'
     ];
 
     protected $hidden = [

@@ -3,8 +3,12 @@
     margin: 0px;
 }
 
+body {
+    background-color: #064631;
+}
+
 .container-header {
-    background-color: rgb(13, 81, 2);
+    background-color: #fffde9;
     display: flex;
     height: 150px; width: 100%;
     justify-content: space-between; align-items: center;
@@ -12,10 +16,8 @@
     margin-bottom: 50px;
 }
 
-.title-header {
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-}
+
+
 
 .logo-header {
     width: 150px; height: 150px;
@@ -24,6 +26,21 @@
 .logo-header img {
     width: 100%; height: 100%;
 }
+
+.title-header {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+}
+
+.shoppcart {
+    width: 100px; height: 100px;
+}
+.shoppcart img {
+    opacity: 0%;
+    width: 100px; height: 100px;
+}
+
 
 
 
@@ -44,7 +61,8 @@
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     width: 300px; height: 300px;
-    border: 1px solid #000;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
     padding: 5px;
 }
 .categoria-box p {
@@ -54,14 +72,83 @@
 }
 .box {
     width: 90%; height: 90%;
-    border: 1px solid #ccc;
 }
 .box img {
     width: 100%; height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* Page Pizzas */
+
+.sub-title {
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sub-title div {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+.container-pizzas {
+    /* background-color: aqua; */
+    display: flex; flex-direction: column;
+    width: 100%; height: 800px;
+}
+
+.box-pizza {
+    /* background-color: purple; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;height: 500px;
+}
+
+.quadro-pizza {
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 25%; height: 500px;
+}
+
+.info-pizza {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-between;
+    width: 400px; height: 480px;
+    border:2px solid #fff;
+    border-radius: 40px;
+    padding: 20px;
+}
+.image-pizza {
+    width: 250px; height: 250px;
+}
+.image-pizza img {
+    width: 100%; height: 100%;
+    border-radius: 15px;
+}
+
+.desc-pizza {
+    font-size: 25px;
+    color: #fff;
+}
+
+.price-pizza {
+    font-size: 28px; font-weight: bold;
+    color: #fff;
 }

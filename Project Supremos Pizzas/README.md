@@ -1,7 +1,7 @@
-## Sobre o Projeto
-Este é um projeto para fazer pedido em uma pizzaria, a ideia é o cliente fazer o pedido pelo site
+##Sobre o Projeto
+É um projeto onde o cliente faz o pedido de uma pizza pelo site da pizzaria
 
-- **Funcionalidades:** Ver as promoções, escolher qual categoria de pizza ele deseja, adicionar ao carrinho e finalizar o pedido
-- **Funcionalidades Para o Dono da Pizzaria:** Controle Total do CRUD das pizzas, seus valores, descrições, nomes, podendo adicionar, ler, fazer uma alteração e excluir algum sabor de pizza.
+- **Funcionabilidades:** O cliente poderá ver promoções, escolher qual tipo de pizza deseja, adicionar ao carrinho e finalizar o pedido.
+- **Funcionabilidades Para Admin:** O dono da Pizzaria terá controle total ao ver todos os sabores existentes no data base, adição de novos sabores de pizza, alteração e exclusão, CRUD. 
 
-**(Projeto em Desenvolvimento)**
+(Projeto em Desenvolvimento).
