@@ -22,10 +22,12 @@ class AuthController extends Controller {
         }
     }
 
+    
     public function logout() {
         Auth::logout();
         return redirect(route('admin.login'));
     }
+
 
     public function register() {
         return view('auth.register');

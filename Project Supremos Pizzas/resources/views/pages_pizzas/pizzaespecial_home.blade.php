@@ -14,10 +14,18 @@
                     <div class="image-pizza">
                         <img src="/assets/image/pizzamilhobacon.png" />
                     </div>
+                    <div class="name-pizza">{{$item->flavor}}</div>
                     <div class="desc-pizza">
-                       {{$item['description']}}
+                       {{$item->description}}
                     </div>
-                    <div class="price-pizza">R$ {{number_format($item['price_g'], 2)}}</div>
+                    <div class="price-pizza">R$ {{number_format($item->price_g, 2)}}</div>
+                </div>
+                <div class="cart">
+                    <div class="add-cart"> + </div>
+                    <button>
+                        Adicionar Ao Carrinho
+                    </button>
+                    <div class="sub-cart"> - </div>
                 </div>
             </div>
             @endforeach

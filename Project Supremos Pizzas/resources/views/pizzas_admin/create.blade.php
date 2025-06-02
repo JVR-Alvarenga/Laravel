@@ -8,5 +8,11 @@
         <input type="double" name="price_g" placeholder="pizza grande"/>
 
         <input type="submit" value="Enviar"/>
-    </form>
+    </form><br/>
+
+    <a href="{{route('admin.home')}}">
+        <button>
+            Voltar para Home Adm
+        </button>
+    </a>
 </x-layout>

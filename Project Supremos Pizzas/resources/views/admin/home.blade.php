@@ -4,7 +4,12 @@
             Sair
         </button>
     </a>
+    <a href="{{route('create.pizza')}}">
+        <button>
+            Adicionar Novo Sabor de Pizza
+        </button>
+    </a><br/><br/>
 
-    <h1>Hello Admin</h1>
+    <h1>Hello {{$user->name}}</h1>
 
 </x-layout>
