@@ -21,11 +21,14 @@
                     <div class="price-pizza">R$ {{number_format($item->price_g, 2)}}</div>
                 </div>
                 <div class="cart">
+                    <div class="sub-cart"> - </div>
+                    <div class="quant-item-cart"> 0 </div>
                     <div class="add-cart"> + </div>
+                </div>
+                <div class="cart-add-submit">
                     <button>
                         Adicionar Ao Carrinho
                     </button>
-                    <div class="sub-cart"> - </div>
                 </div>
             </div>
             @endforeach
