@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Pizza;
+use App\Models\TypePizza;
 
 class User extends Authenticatable {
     use HasFactory, Notifiable;
@@ -31,5 +33,12 @@ class User extends Authenticatable {
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function typePizzas() {
+        return $this->hasMany(TypePizza::class);
+    }
+    public function pizzas() {
+        return $this->hasMany(Pizza::class);
     }
 }

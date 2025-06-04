@@ -17,6 +17,7 @@ class HomeController extends Controller {
     }
     public function homeEspecial() {
         $data = Pizza::where('type', 'especial')->get();
+        $data['title'] = 'Pizzas Especiais';
 
         return view('pages_pizzas.pizzaespecial_home', ['dataPizza' => $data]);
     }

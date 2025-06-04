@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Validator;
 
 class AuthController extends Controller {
     public function login() {
@@ -20,6 +21,8 @@ class AuthController extends Controller {
         if(Auth::attempt($validate)) {
             return redirect(route('admin.home'));
         }
+
+        return redirect(route('admin.login'));
     }
 
     

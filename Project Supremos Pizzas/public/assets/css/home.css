@@ -16,7 +16,16 @@ body {
     margin-bottom: 50px;
 }
 
-
+.alert alert-success {
+    width: 200px;
+    color:#fff;
+    font-size: 18px; font-weight: bold;
+}
+.alert alert-danger {
+    width: 200px;
+    color:#fff;
+    font-size: 18px; font-weight: bold;
+}
 
 
 .logo-header {
@@ -123,8 +132,8 @@ a {
 
 .quadro-pizza {
     display: flex; flex-direction: column;
-    align-items: center; justify-content: space-between;
-    width: 25%; height: 580px;
+    align-items: center; justify-content: center;
+    width: 25%; height: 600px;
 }
 
 
@@ -162,14 +171,20 @@ a {
 }
 
 
+/* Carrinho */
 .cart {
     display: flex;
     align-items: center; justify-content: space-between;
-    width: 280px; height: 50px;
+    width: 200px; height: 50px;
     margin: 0px 0px 10px 0px;
 }
-.cart button {
-    width: 75%; height: 100%;
+.cart-add-submit {
+    display:  flex;
+    align-items: center; justify-content: center;
+    width:50%;
+}
+.cart-add-submit button {
+    width: 78%; height: 100%;
     background-color: #fffde9;
     border-radius: 15px;
     font-size: 18px;
@@ -180,4 +195,12 @@ a {
     width:50px;
     font-size: 30px; font-weight: bold;
     color: #fff; cursor: pointer;
+}
+.sub-cart {
+    padding-bottom: 5px;
+}
+
+.quant-item-cart {
+    font-size: 30px; font-weight: bold;
+    color: #fff;
 }
