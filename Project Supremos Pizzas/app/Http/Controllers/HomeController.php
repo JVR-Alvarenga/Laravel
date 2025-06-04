@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;  
-use App\Models\Pizza;  
+use App\Models\Pizza; 
+use App\Models\TypePizza; 
 
 class HomeController extends Controller {
     public function index() {
@@ -11,24 +12,23 @@ class HomeController extends Controller {
     }
 
     public function homeTradicional() {
-        $data = Pizza::where('type', 'tradicional')->get();
+        $data = TypePizza::where('name', 'tradicional')->first();
 
-        return view('pages_pizzas.pizzatradicional_home', ['dataPizza' => $data]);
+        return view('pages_pizzas.pizzatradicional_home', ['dataPizza' => $data->pizzas]);
     }
     public function homeEspecial() {
-        $data = Pizza::where('type', 'especial')->get();
-        $data['title'] = 'Pizzas Especiais';
+        $data = TypePizza::where('name', 'especial')->first();
 
-        return view('pages_pizzas.pizzaespecial_home', ['dataPizza' => $data]);
+        return view('pages_pizzas.pizzaespecial_home', ['dataPizza' => $data->pizzas]);
     }
     public function homeDoce() {
-        $data = Pizza::where('type', 'doce')->get();
+        $data = TypePizza::where('name', 'doce')->first();
 
-        return view('pages_pizzas.pizzadoce_home', ['dataPizza' => $data]);
+        return view('pages_pizzas.pizzadoce_home', ['dataPizza' => $data->pizzas]);
     }
     public function homeFrango() {
-        $data = Pizza::where('type', 'frango')->get();
+        $data = TypePizza::where('name', 'frango')->first();
 
-        return view('pages_pizzas.pizzafrango_home', ['dataPizza' => $data]);
+        return view('pages_pizzas.pizzafrango_home', ['dataPizza' => $data->pizzas]);
     }
 }

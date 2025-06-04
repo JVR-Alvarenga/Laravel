@@ -1,4 +1,4 @@
-<x-layout title="- Especiais">
+<x-layout title="- Pizzas Especiais">
 
     <div class="sub-title">
         <div>
@@ -7,49 +7,11 @@
     </div>
 
     @if(count($dataPizza) > 0)
-        <x-pizzas.itens dataPizza="{{$dataPizza}}">
+        <x-pizzas.itens :dataPizza="$dataPizza">
         </x-pizzas.itens>
-    @endIf
+    @else
+        <h3>Não Existe Ainda Pizzas Deste Tipo</h3>
+    @endif
 
-    <!-- <div class="container-pizzas">
-        <div class="box-pizza">
-            @foreach($dataPizza as $item):
-            <div  class="quadro-pizza">
-                <div class="info-pizza">
-                    <div class="image-pizza">
-                        <img src="/assets/image/pizzamilhobacon.png" />
-                    </div>
-                    <div class="name-pizza">{{$item->flavor}}</div>
-                    <div class="desc-pizza">
-                       {{$item->description}}
-                    </div>
-                    <div class="price-pizza">R$ {{number_format($item->price_g, 2)}}</div>
-                </div>
-                <div class="cart">
-                    <div class="sub-cart"> - </div>
-                    <div class="quant-item-cart"> 0 </div>
-                    <div class="add-cart"> + </div>
-                </div>
-                <div class="cart-add-submit">
-                    <button>
-                        Adicionar Ao Carrinho
-                    </button>
-                </div>
-            </div>
-            @endforeach
-        </div> -->
-        <!-- <div class="box-pizza">
-            <div class="quadro-pizza">
-                <div class="info-pizza">
-                    <div class="image-pizza">
-                        <img src="/assets/image/pizzamilhobacon.png" />
-                    </div>
-                    <div class="desc-pizza">
-                        molho de tomate, milho, presunto, bacon...
-                    </div>
-                    <div class="price-pizza">R$ 00,00</div>
-                </div>
-            </div>
-        </div> -->
     </div>
 </x-layout>

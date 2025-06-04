@@ -6,16 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\TypePizza;
 use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class TypePizzaController extends Controller {
     public function createAction(Request $r) {
         $type = $r->validate([
             'name' => 'required'
         ]);
-        $type = $r->only(['name']);
+        $type['name'] = Str::lower($r->name);
         $type['user_id'] = Auth::id();
 
-        if(TypePizza::where('name', $r->name)) {
+        if(TypePizza::where('name', $type['name'])) {
             TypePizza::create($type);
             return redirect(route('create.pizza'))->with('success', 'Tipo de Pizza Criado com Sucesso !');
         }
