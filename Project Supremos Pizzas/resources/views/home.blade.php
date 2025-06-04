@@ -2,40 +2,18 @@
 
     <section class="container-main">
 
+        @foreach($dataType as $item):
         <div class="container-categorias">
             <div class="categoria-box">
                 <div class="box 1">
-                    <img src="assets/image/pizzamilhobacon.png" />
+                    <img src="{{$item->path_file}}" />
                 </div>
-                <a href="{{route('home.pizza.especial')}}">
-                    <p>Especiais</p>
-                </a>
-            </div>
-            <div class="categoria-box">
-                <div class="box 2">
-                    <img src="assets/image/pizzacalabresa.png" />
-                </div>
-                <a href="{{route('home.pizza.tradicional')}}">
-                    <p>Tradicionais</p>
-                </a>
-            </div>
-            <div class="categoria-box">
-                <div class="box 3">
-                    <img src="assets/image/pizzafrango.png" />
-                </div>
-                <a href="{{route('home.pizza.frango')}}">
-                    <p>Frango</p>
-                </a>
-            </div>
-            <div class="categoria-box">
-                <div class="box 4">
-                    <img src="assets/image/pizzadoce.png" />
-                </div>
-                <a href="{{route('home.pizza.doce')}}">
-                    <p>Doces</p>
+                <a href="{{route('home.pizzas', ['id' => $item->id])}}">
+                    <p>{{$item=>name}}</p>
                 </a>
             </div>
         </div>
+        @endforeach
 
     </section>
 

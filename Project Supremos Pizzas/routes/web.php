@@ -36,9 +36,6 @@ Route::middleware('guest')->group(function () {
 //Homes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home/pizza/tradicional', [HomeController::class, 'homeTradicional'])->name('home.pizza.tradicional');
-Route::get('/home/pizza/especial', [HomeController::class, 'homeEspecial'])->name('home.pizza.especial');
-Route::get('/home/pizza/doce', [HomeController::class, 'homeDoce'])->name('home.pizza.doce');
-Route::get('/home/pizza/frango', [HomeController::class, 'homeFrango'])->name('home.pizza.frango');
+Route::get('/home/pizzas/{id}', [HomeController::class, 'homePizzas'])->name('home.pizzas');
 
 

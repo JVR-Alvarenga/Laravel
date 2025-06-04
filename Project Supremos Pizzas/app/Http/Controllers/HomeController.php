@@ -3,32 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;  
+use Illuminate\Support\Facades\Auth;
 use App\Models\Pizza; 
 use App\Models\TypePizza; 
 
 class HomeController extends Controller {
     public function index() {
-        return view('home');
+        $loggedId = Auth::id();
+        $data = TypePizza::where('user_id', $loggedId)->first();
+
+
+        return view('home', ['dataType' => $data]);
     }
 
-    public function homeTradicional() {
-        $data = TypePizza::where('name', 'tradicional')->first();
+    public function homePizzas(Request $r) {
+        if(!$r->id) {
+            return redirect(route('home'));
+        }
+        $data = TypePizza::where('id', $r->id)->first();
 
-        return view('pages_pizzas.pizzatradicional_home', ['dataPizza' => $data->pizzas]);
-    }
-    public function homeEspecial() {
-        $data = TypePizza::where('name', 'especial')->first();
-
-        return view('pages_pizzas.pizzaespecial_home', ['dataPizza' => $data->pizzas]);
-    }
-    public function homeDoce() {
-        $data = TypePizza::where('name', 'doce')->first();
-
-        return view('pages_pizzas.pizzadoce_home', ['dataPizza' => $data->pizzas]);
-    }
-    public function homeFrango() {
-        $data = TypePizza::where('name', 'frango')->first();
-
-        return view('pages_pizzas.pizzafrango_home', ['dataPizza' => $data->pizzas]);
+        return view('pizzas_home', ['dataPizza' => $data->pizzas]);
     }
 }

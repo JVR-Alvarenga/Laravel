@@ -11,9 +11,17 @@ use Illuminate\Support\Str;
 class TypePizzaController extends Controller {
     public function createAction(Request $r) {
         $type = $r->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'path_file' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
         ]);
+
+        $image = null;
+        if($r->hasFile('path_file')) {
+            $image = $r->file('path_file')->store('assets/image', 'public');
+        }
+        
         $type['name'] = Str::lower($r->name);
+        $type['path_file'] = $image;
         $type['user_id'] = Auth::id();
 
         if(TypePizza::where('name', $type['name'])) {
