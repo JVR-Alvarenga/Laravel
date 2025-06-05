@@ -12,7 +12,7 @@ class TypePizzaController extends Controller {
     public function createAction(Request $r) {
         $type = $r->validate([
             'name' => 'required|unique:type_pizzas,name',
-            'path_file' => 'nullable|image|max:2048'
+            'path_file' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
         if($r->hasFile('path_file')) {
