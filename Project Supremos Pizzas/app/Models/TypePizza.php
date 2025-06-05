@@ -13,7 +13,7 @@ class TypePizza extends Model {
     public $table = 'type_pizzas';
 
     protected $fillable = [
-        'name', 'user_id'
+        'name', 'path_file','user_id'
     ];
 
     public $timestamps = false;

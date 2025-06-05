@@ -11,24 +11,23 @@ use Illuminate\Support\Str;
 class TypePizzaController extends Controller {
     public function createAction(Request $r) {
         $type = $r->validate([
-            'name' => 'required',
-            'path_file' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
+            'name' => 'required|unique:type_pizzas,name',
+            'path_file' => 'nullable|image|max:2048'
         ]);
 
-        $image = null;
         if($r->hasFile('path_file')) {
-            $image = $r->file('path_file')->store('assets/image', 'public');
+            $type['path_file'] = $r->file('path_file')->store('/assets/image', 'public');
+        }else {
+            $type['path_file'] = null;
         }
         
         $type['name'] = Str::lower($r->name);
-        $type['path_file'] = $image;
         $type['user_id'] = Auth::id();
 
-        if(TypePizza::where('name', $type['name'])) {
-            TypePizza::create($type);
+        if(TypePizza::create($type)) {
             return redirect(route('create.pizza'))->with('success', 'Tipo de Pizza Criado com Sucesso !');
         }
-
+        
         return redirect(route('create.pizza'))->with('error', 'Erro Ao Criar Um Tipo de Pizza');
     }
 }

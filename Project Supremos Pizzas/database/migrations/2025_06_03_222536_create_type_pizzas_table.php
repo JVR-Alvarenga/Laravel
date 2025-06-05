@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('type_pizzas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('path_file')->nullable();
+            $table->string('path_file')->nullable(true);
             $table->foreignIdFor(User::class)->constrained();
         });
     }

@@ -12,12 +12,11 @@ class HomeController extends Controller {
         $loggedId = Auth::id();
         $data = TypePizza::where('user_id', $loggedId)->first();
 
-
         return view('home', ['dataType' => $data]);
     }
 
     public function homePizzas(Request $r) {
-        if(!$r->id) {
+        if(!empty($r->id)) {
             return redirect(route('home'));
         }
         $data = TypePizza::where('id', $r->id)->first();

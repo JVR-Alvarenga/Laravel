@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->id();
             $table->string('flavor');
             $table->text('description');
+            $table->string('path_file')->nullable(true);
             $table->double('price_m');
             $table->double('price_g');
             $table->foreignIdFor(User::class)->constrained();
