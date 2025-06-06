@@ -4,7 +4,7 @@
         <div  class="quadro-pizza">
             <div class="info-pizza">
                 <div class="image-pizza">
-                    <img class="image" src="{{$item->path_file}}" />
+                    <img class="image" src="{{asset('storage/' . $item->path_file)}}" />
                 </div>
                 <div class="name-pizza">{{$item->flavor}}</div>
                 <div class="desc-pizza">

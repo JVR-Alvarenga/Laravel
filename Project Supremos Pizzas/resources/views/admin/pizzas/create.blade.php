@@ -12,7 +12,7 @@
         @endif
 
 
-    <form action="{{route('create.pizza.action')}}" method="post">
+    <form action="{{route('create.pizza.action')}}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="string" name="flavor" placeholder="nome da pizza"/>
 
@@ -33,7 +33,7 @@
 
     
     <h3>Crie Um Novo Tipo de Pizza</h3>
-    <form action="{{route('create.type.pizza.action')}}" method="post">
+    <form action="{{route('create.type.pizza.action')}}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="string" name="name" placeholder="Nome do Tipo de Pizza"/>
         <input type="file" name="path_file" accept="image/jpeg,png,jpg" />

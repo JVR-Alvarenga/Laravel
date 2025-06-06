@@ -16,7 +16,7 @@ class TypePizzaController extends Controller {
         ]);
 
         if($r->hasFile('path_file')) {
-            $type['path_file'] = $r->file('path_file')->store('/assets/image', 'public');
+            $type['path_file'] = $r->file('path_file')->store('assets/image', 'public');
         }else {
             $type['path_file'] = null;
         }

@@ -2,18 +2,18 @@
 
     <section class="container-main">
 
-        @foreach($dataType as $item):
         <div class="container-categorias">
-            <div class="categoria-box">
-                <div class="box 1">
-                    <img src="{{$item->path_file}}" />
+            @foreach($dataType as $item):
+            <a href="{{route('home.pizzas', ['id' => $item->id])}}">
+                <div class="categoria-box">
+                    <div class="box 1">
+                        <img src="{{asset('storage/' . $item->path_file)}}" />
+                    </div>
+                        <p>{{ucfirst($item->name)}}</p>
                 </div>
-                <a href="{{route('home.pizzas', ['id' => $item->id])}}">
-                    <p>{{$item=>name}}</p>
-                </a>
-            </div>
+            </a>
+            @endforeach
         </div>
-        @endforeach
 
     </section>
 
