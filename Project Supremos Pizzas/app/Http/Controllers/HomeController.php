@@ -22,9 +22,9 @@ class HomeController extends Controller {
         if(empty($r->id)) {
             return redirect(route('home'));
         }
-        $data = TypePizza::where('id', $r->id)->get();
+        $data = TypePizza::where('id', $r->id)->first();
 
 
-        return view('pizzas_home', ['dataPizza' => $data->pizzas]);
+        return view('pizzas_home', ['dataPizza' => $data]);
     }
 }

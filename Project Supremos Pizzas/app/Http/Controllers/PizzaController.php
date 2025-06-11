@@ -20,8 +20,8 @@ class PizzaController extends Controller {
             'type_pizza_id' => 'required',
             'description' => 'required',
             'path_file' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
-            'price_m' => 'required',
-            'price_g' => 'required'
+            'price_m' => 'required|numeric',
+            'price_g' => 'required|numeric'
         ]);
 
         $image = null;
@@ -34,9 +34,9 @@ class PizzaController extends Controller {
         $pizza['user_id'] = Auth::id();
 
         if(Pizza::create($pizza)) {
-            return redirect(route('create.pizza'))->with('success', 'Sabor de Pizza criado com sucesso!');
+            return redirect(route('create.itens'))->with('success', 'Sabor de Pizza criado com sucesso!');
         }
         
-        return redirect(route('create.pizza'))->with('error', 'Erro Ao Criar Um Sabor de Pizza');
+        return redirect(route('create.itens'))->with('error', 'Erro Ao Criar Um Sabor de Pizza');
     }
 }

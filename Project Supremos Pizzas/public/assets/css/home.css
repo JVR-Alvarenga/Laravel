@@ -190,7 +190,7 @@ a {
     width: 78%; height: 100%;
     background-color: #fffde9;
     border-radius: 15px;
-    font-size: 18px;
+    font-size: 18px; cursor: pointer;
 }
 .add-cart, .sub-cart {
     display: flex;
@@ -206,4 +206,18 @@ a {
 .quant-item-cart {
     font-size: 30px; font-weight: bold;
     color: #fff;
+}
+
+
+/* Page Home Admin */
+
+.lista-drinks {
+    font-size: 40px;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.item-drinks li {
+    font-size: 28px;
+    margin:10px 0px 0px 45px;
 }

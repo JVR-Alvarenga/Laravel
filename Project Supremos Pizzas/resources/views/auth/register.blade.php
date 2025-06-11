@@ -7,4 +7,7 @@
         <input type="password" name="password_confirmation" placeholder="Confirme Sua Senha:"/>
         <input type="submit" value="Fazer Cadastro"/>
     </form>
+    <h2>Já Tem Conta? Clique 
+        <a href="{{route('admin.login')}}">Aqui</a>
+    </h2>
 </x-layout>

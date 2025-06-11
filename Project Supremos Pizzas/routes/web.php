@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TypePizzaController;
+use App\Http\Controllers\DrinksController;
 
 
 
@@ -15,10 +16,12 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     
     Route::get('/admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
     
-    Route::get('/create/pizza', [PizzaController::class, 'create'])->name('create.pizza');
+    Route::get('/create/itens', [AdminController::class, 'createItens'])->name('create.itens');
     Route::post('/create/pizza/action', [PizzaController::class, 'createAction'])->name('create.pizza.action');
     
     Route::post('/create/type/pizzas/action', [TypePizzaController::class, 'createAction'])->name('create.type.pizza.action');
+    
+    Route::post('/create/drinks', [DrinksController::class, 'createAction'])->name('create.drinks.action');
 });
 
 
