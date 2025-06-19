@@ -2,8 +2,13 @@
 
     <section class="container-main">
 
+        <div class="sub-title">
+            <div>
+                <h1>Tipos de Pizzas</h1>
+            </div>
+        </div>
         <div class="container-categorias">
-            @foreach($dataType as $item):
+            @foreach($dataType as $item)
             <a href="{{route('home.pizzas', ['id' => $item->id])}}">
                 <div class="categoria-box">
                     <div class="box 1">

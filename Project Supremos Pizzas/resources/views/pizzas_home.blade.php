@@ -5,9 +5,11 @@
         </div>
     </div>
 
-    @if(empty($dataPizza))
+    @if(count($dataPizza->pizzas) < 1)
         <div class="sub-title">
-            <h3>Não Existe Ainda Pizzas Deste Tipo</h3>
+            <div>
+                <h1>Não Existe Ainda Pizzas Deste Tipo</h1>
+            </div>
         </div>
     @else 
         <x-pizzas.itens :dataPizza="$dataPizza">

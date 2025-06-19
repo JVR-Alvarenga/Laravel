@@ -25,9 +25,9 @@ class TypePizzaController extends Controller {
         $type['user_id'] = Auth::id();
 
         if(TypePizza::create($type)) {
-            return redirect(route('create.pizza'))->with('success', 'Tipo de Pizza Criado com Sucesso !');
+            return redirect(route('create.itens'))->with('success', 'Tipo de Pizza Criado com Sucesso !');
         }
         
-        return redirect(route('create.pizza'))->with('error', 'Erro Ao Criar Um Tipo de Pizza');
+        return redirect(route('create.itens'))->with('error', 'Erro Ao Criar Um Tipo de Pizza');
     }
 }

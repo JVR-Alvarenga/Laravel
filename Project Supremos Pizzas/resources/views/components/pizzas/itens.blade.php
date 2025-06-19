@@ -10,18 +10,19 @@
                 <div class="desc-pizza">
                 {{$item->description}}
                 </div>
+                <div class="pizza-item-add"> + </div>
                 <div class="price-pizza">R$ {{number_format($item->price_g, 2)}}</div>
             </div>
-            <div class="cart">
-                <div class="sub-cart"> - </div>
+            <!-- <div class="cart">
+                <div class="sub-item-cart"> - </div>
                 <div class="quant-item-cart"> 0 </div>
-                <div class="add-cart"> + </div>
+                <div class="add-item-cart"> + </div>
             </div>
             <div class="cart-add-submit">
                 <button>
                     Adicionar Ao Carrinho
                 </button>
-            </div>
+            </div> -->
         </div>
         @endforeach
     </div>

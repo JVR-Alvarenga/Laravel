@@ -25,9 +25,17 @@
         </div>
     </div>
 
-    <main>
-        {{$slot}}
-    </main>
+    <section class="section-main">
+        <!-- Main -->
+        <main id="main">
+            {{$slot}}
+        </main>
 
+        <!--Side Menu Cart-->
+        <div class="side-menu">
+            k
+        </div>
+    </section>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
