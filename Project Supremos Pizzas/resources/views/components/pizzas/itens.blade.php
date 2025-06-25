@@ -1,6 +1,6 @@
 <div class="container-pizzas">
     <div class="box-pizza">
-        @foreach($dataPizza->pizzas as $item):
+        @foreach($dataPizza->pizzas as $item)
         <div  class="quadro-pizza">
             <div class="info-pizza">
                 <div class="image-pizza">

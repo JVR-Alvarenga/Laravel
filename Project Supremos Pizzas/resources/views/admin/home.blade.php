@@ -14,7 +14,7 @@
 
     <h2 style="color: #fff; text-align:center">Tipos de Pizzas Salvas</h2>
     <div class="container-categorias">
-        @foreach($typePizzas as $item):
+        @foreach($typePizzas as $item)
         <a href="{{route('home.pizzas', ['id' => $item->id])}}">
             <div class="categoria-box">
                 <div class="box 1">

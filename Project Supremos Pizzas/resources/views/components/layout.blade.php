@@ -33,7 +33,7 @@
 
         <!--Side Menu Cart-->
         <div class="side-menu">
-            k
+
         </div>
     </section>
     <script src="/assets/js/script.js"></script>
