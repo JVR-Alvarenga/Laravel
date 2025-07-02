@@ -32,9 +32,35 @@
         </main>
 
         <!--Side Menu Cart-->
-        <div class="side-menu">
+        <section class="side-menu">
+            <div class="container">
+                <div class="title">
+                    Suas Pizzas
+                </div>
+                <div class="pizza-item">
+                    <div class="image">k</div>
+                    <div class="sub-title"> Calabresa </div>
+                    <div class="units">
+                        <div class="sub-unit">-</div>
+                        <div class="quantity">0</div>
+                        <div class="add-unit">+</div>
+                    </div>
+                </div>
+                <div class="sub-total">
+                    Subtotal: R$ 00,00
+                </div>
+                <div class="desconto">
+                    Desconto: R$ 00,00
+                </div>
+                <div class="price-total">
+                    TOTAL: R$ 00,00
+                </div>
 
-        </div>
+                <div class="buy">
+                    <button> Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
     </section>
     <script src="/assets/js/script.js"></script>
 </body>
